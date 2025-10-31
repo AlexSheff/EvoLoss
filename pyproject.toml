@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evoloss"
+version = "0.1.1"
+description = "Evolutionary discovery of loss functions"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    # keep in sync with requirements.txt; pyproject is for build metadata
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"

@@ -1,0 +1,27 @@
+experiment_name: synth_large
+save_dir: results/run_synth_large
+device: cpu
+seed: 123
+
+dataset:
+  type: synthetic
+  samples: 8192
+  input_dim: 20
+  batch_size: 64
+
+model:
+  type: linear
+  hidden_dim: 64
+
+evolution:
+  population_size: 30
+  generations: 16
+  max_depth: 5
+  crossover_rate: 0.7
+  mutation_rate: 0.25
+  elitism: 3
+
+training:
+  epochs: 3
+  lr: 0.01
+  weight_decay: 0.0

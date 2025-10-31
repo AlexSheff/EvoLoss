@@ -1,0 +1,9 @@
+torch
+torchvision
+numpy==1.26.4
+pyyaml
+matplotlib
+seaborn
+sympy
+networkx
+pytest

@@ -1,0 +1,28 @@
+dataset: mnist
+data_dir: ./data
+batch_size: 64
+epochs: 3
+learning_rate: 0.01
+device: cpu  # options: 'cpu' or 'cuda'
+
+# Evolution parameters
+population_size: 20
+tournament_size: 3
+max_tree_depth: 5
+mutation_rate: 0.2
+crossover_rate: 0.8
+seed: 42
+save_dir: ./results
+generations: 6
+checkpoint_interval: 1
+elitism: 2
+parallel_eval: false
+similarity_threshold: 0.8
+diversity_weight: 0.2
+
+# Multi-objective evaluation parameters
+w1: 1.0   # accuracy weight
+w2: 0.01  # complexity penalty weight
+w3: 0.1   # gradient stability penalty weight
+w4: 0.1   # convergence speed weight
+grad_threshold: 100.0 # gradient norm threshold for penalty

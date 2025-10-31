@@ -1,0 +1,33 @@
+dataset:
+  type: custom
+  loader: evoloss.data_loaders:load_fashion_mnist
+  samples: 3000
+data_dir: ./data
+batch_size: 64
+epochs: 1
+learning_rate: 0.01
+device: cpu
+max_train_batches: 80
+max_val_batches: 40
+
+# Evolution parameters (quick run)
+population_size: 6
+tournament_size: 3
+max_tree_depth: 4
+mutation_rate: 0.3
+crossover_rate: 0.7
+seed: 42
+save_dir: ./results_fashion
+generations: 1
+checkpoint_interval: 1
+elitism: 2
+parallel_eval: false
+similarity_threshold: 0.8
+diversity_weight: 0.2
+
+# Multi-objective evaluation parameters
+w1: 1.0
+w2: 0.01
+w3: 0.1
+w4: 0.1
+grad_threshold: 100.0
